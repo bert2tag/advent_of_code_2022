@@ -2,6 +2,12 @@
 import sys
 import pprint
 
+def top_3(elfs):
+    elf_data = list(elfs.values())
+    
+    elf_data.sort()
+    return elf_data
+
 def max_elf(elfs):
     maxcals = 0
     maxelf = 0
@@ -34,3 +40,6 @@ for line in sys.stdin:
 #pp.pprint(elfs)
 maxelf,maxcals = max_elf(elfs)
 print("elf {}, cals: {}".format(maxelf,maxcals))
+top3tot = sum(top_3(elfs)[-3:])
+print("top3 total: {}".format(top3tot))
+
