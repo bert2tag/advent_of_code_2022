@@ -22,7 +22,7 @@ def scan(data):
         charset.append(c)
         if len(charset) == 14:
             if dupes(charset):
-                fourset.pop(0)
+                charset.pop(0)
             else:
                 return n
     return "huh"
