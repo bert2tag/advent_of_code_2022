@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 import sys
-import re
-
 
 def dupes(chars):
     index = {}
@@ -21,9 +19,9 @@ def scan(data):
     n = 0
     for c in data:
         n += 1
-        fourset.append(c)
-        if len(fourset) == 14:
-            if dupes(fourset):
+        charset.append(c)
+        if len(charset) == 14:
+            if dupes(charset):
                 fourset.pop(0)
             else:
                 return n
