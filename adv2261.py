@@ -15,7 +15,7 @@ def dupes(chars):
         
 
 def scan(data):
-    fourset = []
+    charset = []
     n = 0
     for c in data:
         n += 1
