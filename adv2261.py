@@ -4,15 +4,10 @@ import sys
 def dupes(chars):
     index = {}
     for c in chars:
-        index[c] = 0
-    for c in chars:
-        index[c] += 1
-    for i in index:
-        if index[i] > 1:
+        if c in index:
             return True
+        index[c] = 0
     return False
-        
-        
 
 def scan(data):
     charset = []
@@ -20,7 +15,7 @@ def scan(data):
     for c in data:
         n += 1
         charset.append(c)
-        if len(charset) == 14:
+        if len(charset) == 4:
             if dupes(charset):
                 charset.pop(0)
             else:
